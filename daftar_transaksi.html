@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transaksi - Distro des</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+       
+        header {
+            background-color:   #04386b;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            border-radius: 5px;
+        }
+
+     
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+       
+        .transaction-form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .transaction-form h2 {
+            font-size: 28px;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        .transaction-form label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .transaction-form input, .transaction-form select, .transaction-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .transaction-form button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .transaction-form button:hover {
+            background-color: #2ecc71;
+        }
+
+        
+        .transaction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .transaction-table th, .transaction-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .transaction-table th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        .transaction-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .transaction-table tr:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            background-color:   #04386b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .transaction-form {
+                padding: 15px;
+            }
+
+            .transaction-form h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Logo -->
+        <img src="stiker.jpg" alt="Logo Distro des">
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form Transaksi -->
+    <div class="transaction-form">
+        <h2>Form Transaksi</h2>
+        <form action="#" method="post">
+            <label for="nama-transaksi">Nama Transaksi</label>
+            <input type="text" id="nama-transaksi" name="nama-transaksi" required>
+
+            <label for="jumlah">Jumlah</label>
+            <input type="number" id="jumlah" name="jumlah" required>
+
+            <label for="kategori">Kategori</label>
+            <select id="kategori" name="kategori" required>
+                <option value="Kaos">Kaos</option>
+                <option value="Jaket">Jaket</option>
+                <option value="Hoodie">Hoodie</option>
+            </select>
+
+            <button type="submit">Simpan</button>
+        </form>
+    </div>
+
+    <!-- Link ke Daftar Transaksi -->
+    <div style="text-align: center; margin: 20px;">
+        <a href="daftar_transaksi.html" style="font-size: 18px; color: #2980b9;">Lihat Daftar Transaksi</a>
+    </div>
+
+    <!-- Tabel Daftar Transaksi -->
+    <div class="transaction-table">
+        <h2 style="text-align: center;">Daftar Transaksi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data transaksi akan diisi dinamis melalui server atau JavaScript -->
+                <tr>
+                    <td>Kaos Distro A</td>
+                    <td>2</td>
+                    <td>Kaos</td>
+                </tr>
+                <tr>
+                    <td>Jaket Distro B</td>
+                    <td>1</td>
+                    <td>Jaket</td>
+                </tr>
+                <tr>
+                    <td>Hoodie Distro C</td>
+                    <td>3</td>
+                    <td>Hoodie</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Distro des. Semua hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profil - Distro des</title>
+    <style>
+        /* Mengganti font menjadi Calibri */
+        body {
+            font-family: 'Calibri', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color:   #04386b;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Memusatkan konten di header */
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px; /* Memberikan jarak antara logo dan menu */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Memusatkan item menu */
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            border-radius: 5px;
+        }
+
+        /* Profil Content */
+        .profile-content {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-content h2 {
+            font-size: 28px;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        .profile-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .profile-content img {
+            width: 200px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color:   #04386b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 17px;
+        }
+        /* Media Queries untuk responsif */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .profile-content {
+                padding: 20px;
+            }
+
+            .profile-content h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Logo -->
+        <img src="stiker.jpg" alt="Logo Distro des">
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profil Content -->
+    <div class="profile-content">
+        <h2>Profil Distro des</h2>
+        <p>Selamat datang di Distro des, aplikasi belanja online yang menyediakan berbagai macam koleksi baju distro berkualitas tinggi. Kami hadir untuk memberikan Anda pengalaman belanja yang nyaman dan mudah, dengan berbagai pilihan desain yang sesuai dengan gaya hidup modern.</p>
+        <p>Di Distro des, Anda dapat memilih dari berbagai kategori produk seperti Kaos, Jaket, Hoodie, dan banyak lagi. Kami memastikan semua produk yang kami tawarkan adalah berkualitas, nyaman dipakai, dan memiliki desain yang up-to-date.</p>
+        
+        <img src="stiker.jpg" alt="Tentang Distro des">
+        <p>Deskripsi</p>
+        <p>Kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah dan aman bagi semua pelanggan. Kami juga menyediakan berbagai metode pembayaran yang fleksibel untuk memenuhi kebutuhan setiap pelanggan.</p>
+        <p>Terima kasih telah memilih Distro des sebagai tempat berbelanja. Nikmati koleksi produk kami dan temukan pakaian yang sesuai dengan selera dan gaya Anda.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Distro des. Semua hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Distro Des</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the new font */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f1f6;
+            color: #333;
+        }
+
+        h1 {
+            color: red;
+            font-size: 32px;
+            font-weight: 600;
+            text-align: left;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header {
+            background-color: #04386b;
+            color: white;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        header img {
+            width: 60px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 20;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #16a085;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 90%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .gallery-item button {
+            width: 48%;
+            padding: 12px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .gallery-item button:hover {
+            background-color: #8cc02b;
+        }
+
+        .gallery-item .button-detail {
+            background-color: #16a085;
+        }
+
+        .gallery-item .button-detail:hover {
+            background-color: #1abc9c;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color:   #04386b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 17px;
+        }
+        .cart-sticker {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: url('cart-icon.png') no-repeat center center;
+            background-size: contain;
+            cursor: pointer;
+        }
+
+        /* Styling for product titles (h2) */
+        .gallery-item h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 20px; /* Font size adjusted to medium */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #e74c3c;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item h2:hover {
+            color: #16a085;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .main-content h2 {
+                font-size: 24px;
+            }
+
+            .main-content p {
+                font-size: 16px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            nav a {
+                font-size: 17px;
+                padding: 5px;
+            }
+
+            .main-content h2 {
+                font-size: 20px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DistroDes</h1>
+
+    <div class="cart-sticker" onclick="window.location.href='cart.html'"></div>
+
+    <header>
+        <img src="stiker.jpg" alt="Logo Distro Des">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <p>Kami menawarkan koleksi terbaik dari Kaos, Jaket, dan Hoodie, yang semuanya terbuat dari bahan pilihan yang nyaman dan tahan lama. Produk kami dirancang dengan detail dan memperhatikan tren terbaru, memberikan Anda tidak hanya kenyamanan, tetapi juga gaya yang tak tertandingi. Kami memahami bahwa berbelanja tidak hanya tentang membeli produk, tetapi juga tentang pengalaman yang menyenankan. Oleh karena itu, kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah, cepat, dan aman, langsung dari perangkat Anda.</p>
+    
+        <div class="gallery">
+            <div class="gallery-item">
+                <h2>Kaos </h2>
+                <img src="distro kaos.webp" alt="Kaos Distro">
+                <p>Harga: Rp 150.000</p>
+                <div class="button-container">
+                    <button class="button-detail"><a href="detail.html" style="color: white; text-decoration: none;">Detail</a></button>
+                    <button>Beli<a href="transaksi.html" style="color: white; text-decoration: none;"></a></button>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <h2>Jaket </h2>
+                <img src="distro jaket.jpg" alt="Jaket Distro">
+                <p>Harga: Rp 250.000</p>
+                <div class="button-container">
+                    <button class="button-detail"><a href="produk2.html" style="color: white; text-decoration: none;">Detail</a></button>
+                    <button><a href="transaksi.html" style="color: white; text-decoration: none;">Beli</a></button>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <h2>Hoodie </h2>
+                <img src="hoodie.jpg" alt="Hoodie Distro">
+                <p>Harga: Rp 200.000</p>
+                <div class="button-container">
+                    <button class="button-detail"><a href="produk3.html" style="color: white; text-decoration: none;">Detail</a></button>
+                    <button><a href="transaksi.html" style="color: white; text-decoration: none;">Beli</a></button>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <h2>Topi </h2>
+                <img src="topi.jpg" alt="Topi Distro">
+                <p>Harga: Rp 120.000</p>
+                <div class="button-container">
+                    <button class="button-detail"><a href="produk4.html" style="color: white; text-decoration: none;">Detail</a></button>
+                    <button><a href="transaksi.html" style="color: white; text-decoration: none;">Beli</a></button>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <h2>Sepatu </h2>
+                <img src="sepatu.jpg" alt="Sepatu Distro">
+                <p>Harga: Rp 350.000</p>
+                <div class="button-container">
+                    <button class="button-detail"><a href="produk5.html" style="color: white; text-decoration: none;">Detail</a></button>
+                    <button><a href="transaksi.html" style="color: white; text-decoration: none;">Beli</a></button>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <h2>Bag</h2>
+                <img src="tas.jpg" alt="Bag Distro">
+                <p>Harga: Rp 180.000</p>
+                <div class="button-container">
+                    <button class="button-detail"><a href="produk6.html" style="color: white; text-decoration: none;">Detail</a></button>
+                    <button><a href="transaksi.html" style="color: white; text-decoration: none;">Beli</a></button>
+                </div>
+            </div>
+        </div>
+
+        <h3>Langkah-langkah Menggunakan Aplikasi:</h3>
+        <ol>
+            <li>Instal aplikasi distro dari Google Play atau App Store.</li>
+            <li>Registrasi/Login - Daftar atau masuk dengan akun Anda.</li>
+            <li>Jelajahi Produk - Pilih kategori dan lihat produk yang tersedia.</li>
+            <li>Tambah ke Keranjang - Pilih ukuran dan jumlah, lalu klik "Tambah ke Keranjang".</li>
+            <li>Pilih Pembayaran- Masukkan alamat dan pilih metode pembayaran.</li>
+            <li>Terima Pengiriman- Tunggu pesanan dan terima barang di alamat Anda.</li>
+            <li>Berikan Ulasan - Setelah menerima produk, beri ulasan untuk membantu pembeli lain.</li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Distro Des. Semua hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pembelian - Kaos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f1f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #04386b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+            font-size: 32px;
+        }
+
+        .purchase-detail {
+            margin: 40px;
+        }
+
+        .purchase-detail img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .purchase-info {
+            width: 45%;
+            float: right;
+        }
+
+        .purchase-info h2 {
+            font-size: 28px;
+            color: #e74c3c;
+        }
+
+        .purchase-info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .purchase-info .price {
+            font-size: 24px;
+            color: #e74c3c;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-container input,
+        .form-container select {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #16a085;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #1abc9c;
+        }
+
+        footer {
+            background-color: #04386b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pembelian - Kaos</h1>
+    </header>
+
+    <div class="purchase-detail">
+        <img src="distro kaos.webp" alt="Kaos Distro">
+        <div class="purchase-info">
+            <h2>Kaos Distro</h2>
+            <p>Kaos dengan kualitas bahan premium dan desain yang trendy. Tersedia dalam ukuran M, L, dan XL.</p>
+            <p class="price">Harga: Rp 150.000</p>
+
+            <div class="form-container">
+                <label for="size">Pilih Ukuran:</label>
+                <select id="size" name="size">
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+                <label for="quantity">Jumlah:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+
+                <div class="button-container">
+                    <button onclick="window.location.href='checkout.html'">Lanjutkan ke Pembayaran</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Distro Des. Semua hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>
